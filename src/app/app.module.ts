@@ -11,11 +11,13 @@ import { ProductAlertComponent } from "./product-alert/product-alert.component";
 import { CartComponent } from "./cart/cart.component";
 import { HttpClientModule } from "@angular/common/http";
 import { ShippingComponent } from "./shipping/shipping.component";
+import { DemoMaterialModule } from "../../material-module";
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
+    DemoMaterialModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: "", component: ProductListComponent },
