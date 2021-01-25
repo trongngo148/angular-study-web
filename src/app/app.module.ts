@@ -12,6 +12,7 @@ import { CartComponent } from "./cart/cart.component";
 import { HttpClientModule } from "@angular/common/http";
 import { ShippingComponent } from "./shipping/shipping.component";
 import { DemoMaterialModule } from "../../material-module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { DemoMaterialModule } from "../../material-module";
     HttpClientModule,
     DemoMaterialModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: "", component: ProductListComponent },
       { path: "product/:productId", component: ProductDetailsComponent },
