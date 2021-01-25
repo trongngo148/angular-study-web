@@ -13,6 +13,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ShippingComponent } from "./shipping/shipping.component";
 import { DemoMaterialModule } from "../../material-module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { LoginComponent } from "./login/login.component";
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     ProductAlertComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    LoginComponent
   ],
   bootstrap: [AppComponent]
 })
