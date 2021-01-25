@@ -4,7 +4,7 @@
 	<span>{{item.name}}</span>
 	<span>{{item.price | currency}}</span>
 </div>
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit">
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
 	<br />
 	<div>
 		<label for="name">Name</label>
@@ -14,8 +14,5 @@
 			<label for="address">Address</label>
 			<input id="address" type="text" formControlName="address" />
   </div>
-			<button mat-icon-button color="accent" aria-label="Example icon button with a heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
 			<button class="button" type="submit">Purchase</button>
 </form>
