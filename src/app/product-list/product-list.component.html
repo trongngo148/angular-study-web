@@ -6,7 +6,7 @@
 	<ng-template #loading>
 		Loading....
 	</ng-template>
-	<button (click)="reLoadImg()">
+	<button mat-raised-button color="accent" (click)="reLoadImg()">
     Load Image Puppies
   </button>
 	<div *ngFor="let product of products">
@@ -16,7 +16,7 @@
 		<p *ngIf="product.description">
 			Description :{{product.description}}
 		</p>
-		<button (click)="share()">
+		<button mat-raised-button color="accent" (click)="share()">
     Share :3
   </button>
 		<app-product-alert [product]="product" (notify)="onNotify()"></app-product-alert>
