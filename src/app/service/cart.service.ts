@@ -24,10 +24,24 @@ export class CartService {
   getSnippingPrices() {
     return this.http.get("../../assets/shipping.json");
   }
-
+  b;
   getDogImg(): Observable<ImgDogModel> {
-    return this.http.get<ImgDogModel>(
+    this.b = this.http.get<ImgDogModel>(
       "https://dog.ceo/api/breeds/image/random"
     );
+    this.b.subscribe(Response => {
+      // If Response comes function
+      // hideloader() is called
+      if (Response) {
+        hideloader();
+      }
+    });
+    function hideloader() {
+      // Setting display of spinner
+      // element to none
+      console.log("hide");
+      document.getElementById("loading").style.display = "none";
+    }
+    return this.b;
   }
 }
