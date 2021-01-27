@@ -14,6 +14,8 @@ import { ShippingComponent } from "./shipping/shipping.component";
 import { DemoMaterialModule } from "../../material-module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LoginComponent } from "./login/login.component";
+import { MatSliderModule } from "@angular/material/slider";
+import { PersonAddComponent } from "./person-add/person-add.component";
 
 @NgModule({
   imports: [
@@ -22,11 +24,13 @@ import { LoginComponent } from "./login/login.component";
     DemoMaterialModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MatSliderModule,
     RouterModule.forRoot([
       { path: "", component: ProductListComponent },
       { path: "product/:productId", component: ProductDetailsComponent },
       { path: "cart", component: CartComponent },
-      { path: "shipping", component: ShippingComponent }
+      { path: "shipping", component: ShippingComponent },
+      { path: "person-add", component: PersonAddComponent }
     ])
   ],
   declarations: [
@@ -37,7 +41,7 @@ import { LoginComponent } from "./login/login.component";
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
-    LoginComponent
+    PersonAddComponent
   ],
   bootstrap: [AppComponent]
 })

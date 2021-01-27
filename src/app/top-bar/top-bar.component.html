@@ -1,7 +1,10 @@
 <a [routerLink]="['/']">
-  <h1>Trong's Store</h1>
+	<h1>Trong's Store</h1>
 </a>
 
-<a [routerLink]="['/cart']" class="button fancy-button"
-  ><i class="material-icons">shopping_cart</i>Checkout</a
->
+<div class="example-button-container" [routerLink]="['/person-add']">
+	<button mat-fab color="warn" aria-label="Example icon button with a home icon">
+          <mat-icon>person_add</mat-icon>
+        </button>
+</div>
+<a [routerLink]="['/cart']" class="button fancy-button"><i class="material-icons">shopping_cart</i>Checkout</a>
