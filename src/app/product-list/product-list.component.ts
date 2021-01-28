@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 import { products } from "../products";
 import { CartService } from "../service/cart.service";
+import { TestEnum } from "./img-dog.model";
 
 @Component({
   selector: "app-product-list",
@@ -20,10 +21,13 @@ export class ProductListComponent implements OnInit {
   onNotify() {
     window.alert("You will be notify when the product goes on sales");
   }
+  tempEnum;
   ngOnInit() {
     this.cartService
       .getDogImg()
       .subscribe(data => (this.dogImgs = data.message));
+    this.tempEnum = TestEnum;
+    console.log(this.tempEnum.Temp1);
   }
   reLoadImg() {
     this.dogImgs =
